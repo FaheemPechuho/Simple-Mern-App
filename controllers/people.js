@@ -56,6 +56,18 @@ const getAllPeople = async (req, res) => {
     }
     res.status(200).send();
   };
+  const deletePerson = async (req, res) => {
+    const {
+      params: {id: personID}
+    } = req;
+    
+    const person = await Person.findOneAndDelete({ _id: personID });
+  
+    if (!person) {
+      return res.status(404).json({msg: `No person with id ${id} found`})
+    }
+    res.status(200).send();
+  };
 
 
   module.exports = {
