@@ -23,6 +23,19 @@ const getAllPeople = async (req, res) => {
     return res.status(200).json({ person });
     
   };
+  const getJob = async (req, res) => {
+
+    const { id: personID } = req.params
+
+    const person = await Person.findOne({
+      _id: personID
+    });
+    if (!person) {
+      res.status(404).json({ msg: `Person with ${personID} doesn't exist` });
+    }
+    return res.status(200).json({ person });
+    
+  };
 
   const updatePerson = async (req, res) => {
     const {
