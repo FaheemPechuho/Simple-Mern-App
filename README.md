@@ -39,7 +39,7 @@ To run the app you need to have Node.js installed and follow these steps:
 
 
 ```
-git clone https://github.com/Kuzma02/Simple-MERN-App.git
+git clone https://github.com/FaheemPechuho/Simple-Mern-App/edit/main/README.md
 ```
 
 2. Open terminal in the repository folder:
